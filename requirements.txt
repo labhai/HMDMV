@@ -1,0 +1,12 @@
+torch==2.4.0
+torchvision==0.19.0
+timm==1.0.9
+einops==0.8.0
+numpy==1.26.4
+pandas==2.2.2
+Pillow==11.3.0
+scikit-learn==1.5.1
+tqdm==4.66.5
+schedulefree==1.4
+wandb==0.17.6
+git+https://github.com/katsura-jp/pytorch-cosine-annealing-with-warmup@12d03c07553aedd3d9e9155e2b3e31ce8c64081a
