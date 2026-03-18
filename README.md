@@ -1,14 +1,12 @@
-# HMDMV
+# Hierarchical mutual distillation for multi-view fusion: Learning from all possible view combinations
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Journal: Pattern Recognition](https://img.shields.io/badge/Journal-Pattern%20Recognition-blue)](https://www.sciencedirect.com/science/article/pii/S0031320326003973)
 
 Official PyTorch implementation of **HMDMV: Hierarchical Mutual Distillation for Multi-View Fusion**.
 
-**Paper:** [Hierarchical mutual distillation for multi-view fusion: Learning from all possible view combinations](https://www.sciencedirect.com/science/article/pii/S0031320326003973)
-
-**Authors:** [Jiwoong Yang]([#](https://scholar.google.com/citations?user=rrsgcvcAAAAJ&hl=ko)), [Haejun Chung]([#](https://scholar.google.com/citations?user=O-oZnIwAAAAJ&hl=ko)), and [Ikbeom Jang]([#](https://scholar.google.com/citations?user=1rBh9xkAAAAJ&hl=ko))
-
+**Paper:** [Hierarchical mutual distillation for multi-view fusion: Learning from all possible view combinations](https://www.sciencedirect.com/science/article/pii/S0031320326003973)  
+**Authors:** [Jiwoong Yang](https://scholar.google.com/citations?user=rrsgcvcAAAAJ&hl=ko), [Haejun Chung](https://scholar.google.com/citations?user=O-oZnIwAAAAJ&hl=ko), and [Ikbeom Jang](https://scholar.google.com/citations?user=1rBh9xkAAAAJ&hl=ko)  
 **Journal:** *Pattern Recognition*
 
 ## Overview
