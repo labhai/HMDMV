@@ -1,8 +1,8 @@
 # HMDMV
 Official PyTorch implementation of **HMDMV: Hierarchical Mutual Distillation for Multi-View Fusion**.
 
-**Paper:** *Hierarchical mutual distillation for multi-view fusion: Learning from all possible view combinations*  
-**Journal:** Pattern Recognition 178 (2026) 113432
+**Paper:** [Hierarchical mutual distillation for multi-view fusion: Learning from all possible view combinations](https://www.sciencedirect.com/science/article/pii/S0031320326003973)  
+**Journal:** Pattern Recognition
 
 ## Overview
 HMDMV is a multi-view fusion framework designed for both **structured** and **unstructured** multi-view image classification.  
@@ -10,20 +10,7 @@ Unlike conventional methods that rely only on single-view or full multi-view fus
 - **Single-view**
 - **Partial multi-view**
 - **Full multi-view**
-
-The framework combines:
-- **all-possible view-combination fusion**
-- **uncertainty-aware weighting**
-- **hierarchical mutual distillation**
-- **flexible inference under varying numbers of views**
-- **scalable subset-sampling strategy for training efficiency**
-
-## Key Features
-- Learns from **all possible subsets of views** instead of only single-view or full-view predictions
-- Uses **uncertainty-aware weighting** to reduce the influence of unreliable view combinations during training
-- Applies **hierarchical mutual distillation** between single/partial multi-view predictions and the full multi-view prediction
-- Supports **flexible inference** when the number of available views differs from training
-- Includes a **Hotels-8k reference benchmark release** in this repository
+It also combines **uncertainty-aware weighting** and **hierarchical mutual distillation** to improve robustness under incomplete multi-view settings.
 
 ## Release Scope
 This public release currently provides:
@@ -31,8 +18,6 @@ This public release currently provides:
 - the training / validation / test pipeline
 - the **Hotels-8k** split files used in our reference benchmark
 - a runnable training script for the Hotels-8k setting
-
-Please note that the paper reports experiments on multiple datasets, including **Hotels-8k, GLDv2, Carvana, and VinDr-Mammo**, but dataset-specific preprocessing pipelines for the other benchmarks are **not included** in this public release.
 
 ## Repository Structure
 ```text
@@ -55,3 +40,38 @@ Please note that the paper reports experiments on multiple datasets, including *
 ├── utils.py
 ├── README.md
 └── LICENSE
+
+## Installation
+```text
+pip install -r requirements.txt
+
+## Dataset Preparation
+This repository includes the Hotels-8k split CSV files only.
+Please prepare the original Hotels-8k images separately and make sure the paths in the CSV files match your local environment.
+
+## Training
+Run the Hotels-8k reference experiment with:
+```text
+bash scripts/run_hotels8k.sh
+
+Or run directly:
+```text
+python main.py \
+    --dataset hotels8k \
+    --num_view 3 \
+    --num_classes 7774 \
+    --method HMDMV \
+    --model_name vit_small_r26_s32_224 \
+    --hmd_loss True
+
+## Citation
+If you find this repository useful, please cite:
+```text
+@article{yang2026hmdmv,
+  title={Hierarchical mutual distillation for multi-view fusion: Learning from all possible view combinations},
+  author={Yang, Jiwoong and Chung, Haejun and Jang, Ikbeom},
+  journal={Pattern Recognition},
+  volume={178},
+  pages={113432},
+  year={2026}
+}
