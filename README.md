@@ -23,6 +23,9 @@ This public release currently provides:
 - the **Hotels-8k** split files used in our reference benchmark
 - a runnable training script for the Hotels-8k setting
 
+## Main Results Overview
+
+
 ## Repository Structure
 ```text
 .
